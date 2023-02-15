@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { colors } from '../../../constants/colors';
 import { ProjectStage } from '../../../helpers/services/types';
@@ -19,25 +19,30 @@ interface Props {
 }
 
 const StageCard = ({ stage, down }: Props) => {
+  const ref = useRef<HTMLButtonElement | null>(null);
   const [opened, setOpened] = useState<boolean>(false);
 
   const isComplete = stage.isComplete ? 'completed' : '';
   const isTodo = stage.isTodo ? 'isTodo' : '';
   const isNextNeedComplete = stage.isNext ? 'next' : '';
 
-  const handleChooseEmployee = () => {
-    setOpened(true);
-  };
+  const handleChooseEmployee = () => setOpened(true);
 
   const handleCloseModal = () => setOpened(false);
 
+  const minHeight = (ref.current?.clientHeight || 0) >= 90 ? '191px' : '154px';
+
   return (
     <>
-      <Wrapper className={isComplete || isTodo || isNextNeedComplete}>
+      <Wrapper
+        style={{ height: minHeight }}
+        className={isComplete || isTodo || isNextNeedComplete}
+      >
         <StageStatus
+          ref={ref}
           onClick={handleChooseEmployee}
           className={isComplete || isTodo || isNextNeedComplete}
-          disabled={stage.isTodo || stage.isComplete}
+          disabled={!stage.isNext}
         >
           {stage.stage}
         </StageStatus>

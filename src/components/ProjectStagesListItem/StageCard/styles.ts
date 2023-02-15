@@ -61,8 +61,8 @@ export const StageStatus = styled.button`
 
   &.next {
     cursor: pointer;
-    color: ${colors.white};
-    background-color: ${colors.orange};
+    color: ${colors.whiteBlack};
+    background-color: ${colors.white};
   }
 
   &:disabled {

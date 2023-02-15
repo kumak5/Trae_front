@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { mediaQueries } from '../../constants/breakpoints';
 
 export const Wrapper = styled.button`
-  font-family: 'Raleway';
   font-weight: 600;
   color: #2a302b;
   border-radius: 15px;
@@ -28,7 +27,7 @@ export const Wrapper = styled.button`
     color: #2a302b;
   } */
 
-  @media ${mediaQueries.mqMedium} {
+  /* @media ${mediaQueries.mqMedium} {
     padding: 18px 30px;
     font-size: 1.9em;
     line-height: 1;
@@ -38,10 +37,10 @@ export const Wrapper = styled.button`
     padding: 28px 50px;
     font-size: 2.2em;
     line-height: 1.1;
-  }
+  } */
 
   @media ${mediaQueries.mqXlarge} {
-    padding: 38px 70px;
+    padding: 35px 54px;
     font-size: 2.5em;
     line-height: 1.2;
   }

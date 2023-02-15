@@ -10,7 +10,7 @@ export const Wrapper = styled.header`
   position: fixed;
   width: 100%;
   z-index: 100;
-  @media ${mediaQueries.mqMedium} {
+  /* @media ${mediaQueries.mqMedium} {
     padding: 20px;
     top: 44px;
   }
@@ -18,11 +18,11 @@ export const Wrapper = styled.header`
   @media ${mediaQueries.mqLarge} {
     padding: 30px;
     top: 54px;
-  }
+  } */
 
   @media ${mediaQueries.mqXlarge} {
-    padding: 40px;
-    top: 64px;
+    padding: 20px;
+    top: 58px;
   }
 `;
 
@@ -33,7 +33,7 @@ export const Button = styled.button`
   cursor: pointer;
 
   svg {
-    @media ${mediaQueries.mqMedium} {
+    /* @media ${mediaQueries.mqMedium} {
       height: 30px;
       width: 30px;
     }
@@ -41,7 +41,7 @@ export const Button = styled.button`
     @media ${mediaQueries.mqLarge} {
       height: 40px;
       width: 40px;
-    }
+    } */
 
     @media ${mediaQueries.mqXlarge} {
       width: 50px;
